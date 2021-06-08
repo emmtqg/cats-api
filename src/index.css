@@ -6,6 +6,147 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* 
+img {
+  max-width: 100%;
+  height: auto;
+} */
+
+a {
+  text-decoration: none;
+}
+
+button.active {
+  background: #8d878d; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e570e7 0%, #c85ec7 47%, #a849a3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #e570e7 0%,#c85ec7 47%,#a849a3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #e570e7 0%,#c85ec7 47%,#a849a3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 ); /* IE6-9 */
+
+  color: whitesmoke;
+}
+
+.dog-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: 1rem; /* gutter size offset */
+  width: auto;
+}
+.dog-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+ 
+/* Style your items */
+.dog-masonry-grid_column > img { 
+  background: grey;
+  margin-bottom: 1rem;
+  max-height: 10rem;
+}
+
+main {
+  height: 100vh;
+  width: 90vw;
+  margin: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.wrapper {
+  display: grid;
+  margin: 1rem 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  background-color: #fff;
+  color: gray;
+}
+
+.box {
+  background-color: gray;
+  color: #fff;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+main .container header h1 {
+  font-family: Nunito;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+main .img-container {
+  width: 100%;
+  margin-top: 5%;
+  padding: 2em 0;
+}
+
+/* animation for the dog spinner */
+main .img-container .spinner {
+  font-size: 50px;
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+main .img-container .dog-img {
+  display: none;
+  width: 80%;
+  margin: 1em auto;
+}
+
+main .img-container .show {
+  display: block;
+}
+
+/* rotate the dog spinner 360deg - keyframes */
+@keyframes spin {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+
+/* media query */
+
+@media only screen and (min-width: 320px) {
+  .container header {
+    display: flex;
+    flex-direction: column;
+  }
+  .container header h1 {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .container header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 875px) {
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .container {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
