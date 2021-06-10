@@ -6,15 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* 
-img {
-  max-width: 100%;
-  height: auto;
-} */
-
-a {
-  text-decoration: none;
-}
 
 button.active {
   background: #8d878d; /* Old browsers */
@@ -26,37 +17,154 @@ button.active {
   color: whitesmoke;
 }
 
-.dog-masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
+/* Flex styles -------------------------------------------------*/
+header {
   display: flex;
-  margin-left: 1rem; /* gutter size offset */
-  width: auto;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 2em;
+  color: white;
+  background-color: #333;
 }
-.dog-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
+
+.leading {
+  height: rem;
+  margin-bottom: 30px;
+  padding: 30px;
+  color: white;
+  background-size: cover;
+  text-shadow: 0px 0px 5px #000;
 }
- 
-/* Style your items */
-.dog-masonry-grid_column > img { 
-  background: grey;
-  margin-bottom: 1rem;
-  max-height: 10rem;
+
+.leading-bigtext {
+  margin-right: 60px;
+  font-weight: bold;
+  font-size: 8rem;
+}
+
+.leading h1,
+.leading p {
+  color: white;
+  text-align: left;
+}
+
+.leading p {
+  display: none;
+}
+
+.leading a {
+  color: lightsalmon;
+  text-decoration: underline;
+}
+
+.leading a:hover {
+  color: lightgreen;
+  text-decoration: wavy;
+}
+
+@media (min-width: 700px) {
+  .leading-bigext {
+    font-size: 8rem;
+  }
+
+  .leading {
+    display: flex;
+    align-items: center;
+  }
+  
+  .leading p {
+    font-size: 2rem;
+    display: inline-block;
+  }
+}
+
+.leading-text {
+  max-width: 900px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.error-text {
+  color: red;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  color: white;
+  gap: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.filters label {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.filters input {
+  width: 10rem;
+  height: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 1rem;
 }
 
 main {
-  height: 100vh;
-  width: 90vw;
-  margin: 1rem;
+  background-color:lavenderblush;
+  width: 95vw;
+  margin: 1rem auto;
+  text-align: center;
 }
 
-header {
+footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  min-height: 10vh;
+  background-color: #333;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}
+
+.breed-showcase {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: space-evenly;
   padding: 1rem;
+  background-color: rgb(223, 223, 197);
+}
+
+.mason-cat {
+  min-width: 300px;
+  max-width: 450px;
+  width: 95%;
+  padding: 1rem;
+}
+
+.pagination {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem auto;
+}
+
+.pagination p {
+  color: white;
+  width: 100%;
 }
 
 .wrapper {
@@ -68,11 +176,11 @@ header {
   color: gray;
 }
 
-.box {
-  background-color: gray;
-  color: #fff;
-  padding: 0 0.5rem;
-  font-size: 1rem;
+.spinner {
+  position: absolute;
+  top: calc(100vh*0.66);
+  left: calc(100vw/2);
+  z-index: 10;
 }
 
 main .container header h1 {
@@ -87,14 +195,7 @@ main .img-container {
   padding: 2em 0;
 }
 
-/* animation for the dog spinner */
-main .img-container .spinner {
-  font-size: 50px;
-  animation: spin 2s linear infinite;
-  display: none;
-}
-
-main .img-container .dog-img {
+main .img-container .cat-img {
   display: none;
   width: 80%;
   margin: 1em auto;
@@ -103,18 +204,9 @@ main .img-container .dog-img {
 main .img-container .show {
   display: block;
 }
-
-/* rotate the dog spinner 360deg - keyframes */
-@keyframes spin {
-  to {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-}
-
-
+/* 
 /* media query */
-
+/* 
 @media only screen and (min-width: 320px) {
   .container header {
     display: flex;
@@ -146,9 +238,4 @@ main .img-container .show {
     max-width: 70%;
     margin: 0 auto;
   }
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+} */
