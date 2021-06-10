@@ -18,11 +18,12 @@ const BreedFormFilter = ({ breeds, handleChange, onChangeSearchQuery }) => {
         }}
       >
         <Form.Item
-            // label="Search Breeds"
-            name="searchBar" 
+            label="Search "
+            name="searchBar"
+            colon={false} 
         >
           <SearchBar
-            placeholderText="Narrow your selection of breeds here"
+            placeholderText="Narrow your selection"
             onChangeSearchQuery={onChangeSearchQuery}
           />
         </Form.Item>
@@ -33,18 +34,23 @@ const BreedFormFilter = ({ breeds, handleChange, onChangeSearchQuery }) => {
           name="breedTypes" 
           >
             <span role="img" aria-label="Cat icon">🐾 </span>
+
             <Select 
               style={{ width: '12rem' }}
               onChange={handleChange}
+              placeholder="Select a breed"
             >
               {/* Using a pipe for the option value to pass back the breed id and the name */}
-              {breeds.map((breed) => {
+              {breeds.map((breed, i) => {
                 return (
+                  <Form.Item key={`${breed.id}fItem`} name={`option${i}`} noStyle>
                   <Option  
                     key={breed.id}
                     value={`${breed.id}|${breed.name}`}
-                  >{breed.name}
+                  >
+                    {breed.name}
                   </Option>
+                  </Form.Item>
                 )}
               )}
             </Select>

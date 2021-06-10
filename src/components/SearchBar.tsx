@@ -23,7 +23,7 @@ export default function SearchBar(props: ISearchProps) {
 
   return (
     <>  
-      <label htmlFor="search">Search <span role="img" aria-label="Cat icon">🐱</span></label>
+      <label htmlFor="search">Breeds <span role="img" aria-label="Cat icon">🐱</span></label>
       <input
         id="search"
         className="form-control"
