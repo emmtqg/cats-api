@@ -12,10 +12,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# Cats!
-This little app is dervived from a similiar API exercise with the Dogs CEO API at https://dog.ceo/api/breeds/list/all. They both have a similiar mission to bring you gratuitously cute images of our favorite furballs to our home screens.
 
-[cats! header]
+<img src="public/assets/images/Cats-Cats-Cats-.png" style="width: 100%" />
+
+# Cats!
+
+<img src="public/assets/images/cat-card.png" style="float: left; width: 200px;" />
+<div style="float: right; margin-left: 1em;">This little app is dervived from a similiar API exercise with the Dogs CEO API at https://dog.ceo/api/breeds/list/all. They both have a similiar mission to bring you gratuitously cute images of our favorite furballs to our home screens.
 
 While adapting the dog-api software to utilize the api.thecapapi.com interface, much of the main page, BreedIndex.jsx was changed. I extracted the API key and URLs to an .env file which, against common practice is not recommended for public repositories (and solely included it for the duration that you will need for evaluation). It will self destruct once your assessment is complete!
 ## Brief Structure Overview
@@ -70,7 +73,7 @@ As outlined above, current plans for the future are:
 8. Implement testing for all components.
 
 Enjoy the felines!
-
+</div>
 
 
 
