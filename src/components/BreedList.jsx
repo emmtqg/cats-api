@@ -102,7 +102,7 @@ const BreedList = ({ breeds }) => {
       <footer
         style={{background: `url(${backgroundImage}) center #333 no-repeat`}}
       >
-        <p>2021 ~ Elizabeth McMahon for 3Play Media</p>
+        <p>2021 ~ Elizabeth McMahon</p>
       </footer>
     </>
   );
